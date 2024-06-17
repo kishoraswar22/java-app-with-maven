@@ -25,6 +25,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    <groupId>com.github.ferstl</groupId>
+    <artifactId>depgraph-maven-plugin</artifactId>
+    <version>4.0.3</version>
+</dependency>
   </dependencies>
 
   <build>
@@ -69,23 +74,7 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-      <plugin>
-              <groupId>com.github.ferstl</groupId>
-                    <artifactId>depgraph-maven-plugin</artifactId>
-                    <version>4.0.1</version>
-                    <configuration>
-                        <graphFormat>puml</graphFormat>
-                        <scope>compile</scope>
-                        <excludes>
-                            <exclude>org.slf4j:slf4j-api</exclude>
-                            <exclude>com.google.guava:guava</exclude>
-                            <exclude>io.vavr:vavr</exclude>
-                        </excludes>
-                        <transitiveExcludes>
-                            <transitiveExclude>*</transitiveExclude>
-                        </transitiveExcludes>
-                    </configuration>
-                </plugin>
+      
        
       </plugins>
     </pluginManagement>
